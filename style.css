@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-button-color: rgb(230, 22, 22);
+    --main-button-hover-color: rgb(197, 22, 22);
+    --faq-bgcolor: rgb(50, 47, 47);
+    --faq-hover-bgcolor: rgb(67, 63, 63);
+}
+
+/* Main background with the black filter effect */
+
+.main {
+    background-image: url(assets/images/IN-en-20260817-TRIFECTA-perspective_dce6e6bc-2bd3-45f2-9086-211bf8b6e8c8_large.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    box-shadow: inset 0px 20px 100px 35px black;
+    height: 110vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 21vh;
+}
+
+.main-box {
+    width: 100%;
+    background-color: black;
+    opacity: 0.72;
+    height: 110vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80.5vw;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav img {
+    height: 6vh;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nav-buttons select {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px 36px 6px 34px;
+    font-size: px;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.sign-in-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 76.9px;
+    background-color: var(--main-button-color);
+    border-radius: 3px;
+}
+
+/* Main content */
+
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-heading {
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 56px;
+    margin: 0 0 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.main-sub-heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 650;
+    margin: 0 0 32px;
+}
+
+.last-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.email-box {
+    padding: 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.email-box input {
+    padding: 0 10px;
+    height: 8vh;
+    width: 25vw;
+    font-size: 17px;
+    color: white;
+    border: 1px solid rgb(76, 73, 73);
+    border-radius: 3px;
+    background-color: rgba(31, 30, 30, 0.5);
+}
+
+.email-box input::placeholder {
+    color: rgb(149, 140, 140);
+}
+
+.get-started-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 8vh;
+    width: 13.5vw;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: var(--main-button-color);
+    border: 0;
+    border-radius: 3px;
+}
+
+.get-started-button img {
+    filter: brightness(0) invert(1);
+}
+
+/* Curved div */
+
+.curved-div {
+    background: linear-gradient(45deg, rgb(62, 60, 60), rgb(139, 2, 141), red, rgb(139, 2, 141), rgb(62, 60, 60));
+    height: 3px;
+}
+
+/* Second section */
+
+.second-section {
+    padding: 0 148px;
+    background-color: black;
+    height: 250vh;
+}
+
+.trending-movie-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 43vh;
+    padding: 10px;
+}
+
+
+.trending-movie-cards img {
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    position: relative;
+}
+
+.trending-movie-cards img:hover {
+    cursor: pointer;
+    transition-delay: 0s;
+    transform: scale(1.05);
+}
+
+.movie1,
+.movie2,
+.movie3,
+.movie4,
+.movie5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    width: 35vh;
+
+}
+
+/* More reasons to join */
+
+.sec-two {
+    margin: 50px 0;
+}
+
+.sec-two-first-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+}
+
+.sec-two-sub-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 278.4px;
+    width: 294.2px;
+    background-color: rgba(28, 17, 53, 0.907);
+    border-radius: 20px;
+}
+
+.sec-two-sub-div h3 {
+    margin: 18px 15px;
+}
+
+.sec-two-sub-div p {
+    color: rgb(220, 186, 186);
+    margin: 0 15px;
+}
+
+.bottom-sub-div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.sec-two-sub-div img {
+    width: 70px;
+    margin: 20px;
+
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 25px;
+}
+
+.faq-container div {
+    font-size: 1.45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    width: 100%;
+    background-color: var(--faq-bgcolor);
+    height: 12vh;
+    transition: all 0.2s ease-in-out;
+}
+
+.faq-container div:hover {
+    cursor: pointer;
+    background-color: var(--faq-hover-bgcolor);
+}
+
+.faq-container img {
+    height: 50px;
+    filter: brightness(0) invert(1);
+    z-index: 10;
+    margin: 10px;
+}
+
+.bottom-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.bottom-email-box {
+    padding: 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bottom-email-box input {
+    padding: 0 10px;
+    height: 8vh;
+    width: 35vw;
+    font-size: 17px;
+    color: white;
+    border: 1px solid rgb(76, 73, 73);
+    border-radius: 3px;
+    background-color: rgba(31, 30, 30, 0.5);
+}
+
+.bottom-email-box input::placeholder {
+    color: rgb(149, 140, 140);
+}
+
+.btn{
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--main-button-hover-color);
+}
