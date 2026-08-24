@@ -18,6 +18,7 @@ body {
     --footer-text-color: rgb(185, 176, 176);
     --input-bgcolor:  rgba(15, 13, 13, 0.812);
     --select-border-color: rgb(101, 96, 96);
+    --footer-last-para-text-color: rgb(156, 143, 143);
 }
 
 /* Main background with the black filter effect */
@@ -73,7 +74,7 @@ body {
     border: 1px solid var(--select-border-color);
     background-color: var(--input-bgcolor);
     padding: 6px 36px 6px 34px;
-    font-size: px;
+    font-size: 14px;
     color: white;
     border-radius: 3px;
 }
@@ -183,7 +184,7 @@ body {
 /* Second section */
 
 .second-section {
-    padding: 0 148px;
+    padding: 50px 148px 0 148px;
     background-color: black;
     height: 230vh;
 }
@@ -384,11 +385,497 @@ footer a{
     cursor: pointer;
 }
 
+.foot3{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.foot3 div{
+    font-size: 0.9rem;
+}
+
+.last-para{
+    color: var(--footer-last-para-text-color);
+}
+
 .foot3 select {
     border: 1px solid var(--select-border-color);
     background-color: var(--input-bgcolor);
     padding: 6px 36px 6px 34px;
-    font-size: px;
+    font-size: 14px;
     color: white;
     border-radius: 3px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   Keeps the existing desktop design while adapting it
+   for tablets, phones and large screens.
+   ========================================================= */
+
+/* Prevent viewport overflow and make sizing predictable */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Large screens */
+@media (min-width: 1600px) {
+    .nav {
+        max-width: 1290px;
+        width: calc(100% - 80px);
+    }
+
+    .second-section,
+    footer {
+        padding-left: clamp(60px, 8vw, 148px);
+        padding-right: clamp(60px, 8vw, 148px);
+    }
+}
+
+/* Laptops / smaller desktops */
+@media (max-width: 1200px) {
+    .nav {
+        width: 90%;
+    }
+
+    .main-heading {
+        font-size: clamp(42px, 5vw, 56px);
+    }
+
+    .second-section {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .trending-movie-cards {
+        gap: 16px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 15px 10px;
+        scrollbar-width: none;
+    }
+
+    .trending-movie-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .movie1,
+    .movie2,
+    .movie3,
+    .movie4,
+    .movie5 {
+        flex: 0 0 auto;
+    }
+
+    .sec-two-first-div {
+        gap: 14px;
+    }
+
+    .sec-two-sub-div {
+        width: calc((100% - 42px) / 4);
+    }
+
+    footer {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .main {
+        min-height: 760px;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        gap: 0;
+    }
+
+    .main-box {
+        height: 100%;
+        min-height: 760px;
+    }
+
+    .nav {
+        width: calc(100% - 48px);
+        padding: 20px 0;
+    }
+
+    .nav img {
+        height: 42px;
+    }
+
+    .content-area {
+        min-height: 610px;
+        justify-content: center;
+        padding: 30px 24px 60px;
+        box-sizing: border-box;
+    }
+
+    .main-heading {
+        font-size: clamp(38px, 6vw, 50px);
+        line-height: 1.1;
+        max-width: 800px;
+    }
+
+    .main-sub-heading {
+        font-size: clamp(17px, 2.5vw, 20px);
+    }
+
+    .email-box,
+    .bottom-email-box {
+        width: min(100%, 650px);
+        justify-content: center;
+    }
+
+    .email-box input {
+        width: min(55vw, 390px);
+        box-sizing: border-box;
+    }
+
+    .get-started-button {
+        width: 180px;
+    }
+
+    .second-section {
+        height: auto;
+        min-height: 0;
+        padding: 45px 6vw 60px;
+    }
+
+    .trending-movie-cards {
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .movie1,
+    .movie2,
+    .movie3,
+    .movie4,
+    .movie5 {
+        width: clamp(130px, 21vw, 190px);
+        height: auto;
+        aspect-ratio: 35 / 45;
+    }
+
+    .trending-movie-cards img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .sec-two-first-div {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .sec-two-sub-div {
+        width: 100%;
+        height: 260px;
+        box-sizing: border-box;
+    }
+
+    .faq-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .faq-container div {
+        font-size: 1.2rem;
+        min-height: 70px;
+        height: auto;
+        padding: 18px 20px;
+        box-sizing: border-box;
+    }
+
+    .faq-container img {
+        height: 38px;
+        flex: 0 0 auto;
+    }
+
+    .bottom-email {
+        margin: 45px 0;
+    }
+
+    .bottom-email-box input {
+        width: min(55vw, 450px);
+        box-sizing: border-box;
+    }
+
+    footer {
+        height: auto;
+        min-height: 500px;
+        padding: 45px 6vw 50px;
+        box-sizing: border-box;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .main {
+        min-height: 700px;
+        background-position: center top;
+    }
+
+    .main-box {
+        min-height: 700px;
+    }
+
+    .nav {
+        width: calc(100% - 32px);
+        padding: 16px 0;
+    }
+
+    .nav img {
+        height: 30px;
+        width: auto;
+    }
+
+    .nav-buttons {
+        gap: 7px;
+    }
+
+    .nav-buttons select,
+    .foot3 select {
+        padding: 5px 24px 5px 8px;
+        font-size: 12px;
+    }
+
+    .sign-in-button {
+        width: 68px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .content-area {
+        min-height: 560px;
+        padding: 20px 16px 45px;
+    }
+
+    .main-heading {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.08;
+        letter-spacing: 0;
+        margin-bottom: 18px;
+    }
+
+    .main-sub-heading {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 22px;
+    }
+
+    .last-sub-heading {
+        max-width: 360px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .email-box,
+    .bottom-email-box {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 14px;
+    }
+
+    .email-box input,
+    .bottom-email-box input {
+        width: 100%;
+        height: 54px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .get-started-button {
+        width: 150px;
+        height: 52px;
+        font-size: 18px;
+    }
+
+    .curved-div {
+        height: 3px;
+    }
+
+    .second-section {
+        padding: 35px 16px 50px;
+    }
+
+    .trending-movie-cards {
+        gap: 12px;
+        padding: 12px 4px;
+        justify-content: flex-start;
+    }
+
+    .movie1,
+    .movie2,
+    .movie3,
+    .movie4,
+    .movie5 {
+        width: 130px;
+        height: 180px;
+    }
+
+    .trending-movie-cards img:hover {
+        transform: scale(1.035);
+    }
+
+    .sec-two {
+        margin: 40px 0;
+    }
+
+    .sec-two-first-div {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .sec-two-sub-div {
+        width: 100%;
+        height: 220px;
+        border-radius: 16px;
+    }
+
+    .sec-two-sub-div h3 {
+        margin: 16px 15px;
+        font-size: 18px;
+    }
+
+    .sec-two-sub-div p {
+        margin: 0 15px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .sec-two-sub-div img {
+        width: 58px;
+        margin: 15px;
+    }
+
+    .faq-container {
+        gap: 6px;
+        padding: 10px 0;
+    }
+
+    .faq-container div {
+        width: 100%;
+        font-size: 1rem;
+        min-height: 62px;
+        padding: 15px;
+    }
+
+    .faq-container img {
+        height: 30px;
+        margin: 5px;
+    }
+
+    .bottom-email {
+        margin: 35px 0;
+        padding: 5px;
+    }
+
+    footer {
+        min-height: 0;
+        padding: 40px 24px 45px;
+    }
+
+    .foot1,
+    .foot2 {
+        font-size: 0.85rem;
+    }
+
+    .foot2 {
+        margin: 35px 0;
+        gap: 14px;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 18px;
+    }
+
+    .foot3 {
+        gap: 24px;
+    }
+
+    .foot3 div {
+        font-size: 0.82rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .nav {
+        width: calc(100% - 24px);
+    }
+
+    .nav img {
+        height: 27px;
+    }
+
+    .nav-buttons select {
+        max-width: 85px;
+        padding-right: 18px;
+    }
+
+    .sign-in-button {
+        width: 62px;
+        font-size: 12px;
+    }
+
+    .content-area {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .main-heading {
+        font-size: 29px;
+    }
+
+    .main-sub-heading {
+        font-size: 15px;
+    }
+
+    .movie1,
+    .movie2,
+    .movie3,
+    .movie4,
+    .movie5 {
+        width: 115px;
+        height: 165px;
+    }
+
+    .second-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    footer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
 }
