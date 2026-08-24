@@ -10,9 +10,14 @@ body {
 
 :root {
     --main-button-color: rgb(230, 22, 22);
-    --main-button-hover-color: rgb(197, 22, 22);
+    --main-button-hover-color: rgb(152, 16, 16);
+    --input-tag-color: rgb(76, 73, 73);
+    --input-placeholder-color: rgb(196, 188, 188);
     --faq-bgcolor: rgb(50, 47, 47);
     --faq-hover-bgcolor: rgb(67, 63, 63);
+    --footer-text-color: rgb(185, 176, 176);
+    --input-bgcolor:  rgba(15, 13, 13, 0.812);
+    --select-border-color: rgb(101, 96, 96);
 }
 
 /* Main background with the black filter effect */
@@ -65,8 +70,8 @@ body {
 }
 
 .nav-buttons select {
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--select-border-color);
+    background-color: var(--input-bgcolor);
     padding: 6px 36px 6px 34px;
     font-size: px;
     color: white;
@@ -136,18 +141,18 @@ body {
 }
 
 .email-box input {
-    padding: 0 10px;
+    padding: 0 20px;
     height: 8vh;
-    width: 25vw;
+    width: 21vw;
     font-size: 17px;
     color: white;
-    border: 1px solid rgb(76, 73, 73);
-    border-radius: 3px;
-    background-color: rgba(31, 30, 30, 0.5);
+    border: 1px solid var(--input-tag-color);
+    border-radius: 5px;
+    background-color: var(--input-bgcolor);
 }
 
 .email-box input::placeholder {
-    color: rgb(149, 140, 140);
+    color: var(--input-placeholder-color);
 }
 
 .get-started-button {
@@ -156,7 +161,7 @@ body {
     align-items: center;
     gap: 10px;
     height: 8vh;
-    width: 13.5vw;
+    width: 13vw;
     font-size: 22px;
     font-weight: bolder;
     background-color: var(--main-button-color);
@@ -180,7 +185,7 @@ body {
 .second-section {
     padding: 0 148px;
     background-color: black;
-    height: 250vh;
+    height: 230vh;
 }
 
 .trending-movie-cards {
@@ -316,18 +321,18 @@ body {
 }
 
 .bottom-email-box input {
-    padding: 0 10px;
+    padding: 0 20px;
     height: 8vh;
     width: 35vw;
     font-size: 17px;
     color: white;
-    border: 1px solid rgb(76, 73, 73);
+    border: 1px solid var(--input-tag-color);
     border-radius: 3px;
-    background-color: rgba(31, 30, 30, 0.5);
+    background-color: var(--input-bgcolor);
 }
 
 .bottom-email-box input::placeholder {
-    color: rgb(149, 140, 140);
+    color: var(--input-placeholder-color);
 }
 
 .btn{
@@ -337,4 +342,53 @@ body {
 .btn:hover{
     cursor: pointer;
     background-color: var(--main-button-hover-color);
+}
+/* Footer */
+
+footer{
+    color: var(--footer-text-color);
+    height: 77vh;
+    background-color: black;
+    padding: 50px 148px 0 148px;
+}
+
+footer a{
+    color: var(--footer-text-color);
+}
+
+.foot1{
+    font-size: 0.95rem;
+}
+
+.foot2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 0.95rem;
+    margin: 50px 0;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+    text-decoration: underline;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.row-1 div:hover,
+.row-2 div:hover,
+.row-3 div:hover,
+.row-4 div:hover{
+    cursor: pointer;
+}
+
+.foot3 select {
+    border: 1px solid var(--select-border-color);
+    background-color: var(--input-bgcolor);
+    padding: 6px 36px 6px 34px;
+    font-size: px;
+    color: white;
+    border-radius: 3px;
 }
